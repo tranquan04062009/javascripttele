@@ -2,17 +2,18 @@
   "name": "telegram-bot",
   "version": "1.0.0",
   "description": "Telegram bot dự đoán kết quả Tài/Xỉu",
-  "master": "bot.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node bot.js",
-    "test": "echo \"No tests specified\" && exit 0"
+    "start": "node bot.js"
   },
   "dependencies": {
-    "telegraf": "^4.0.0",
-    "node-fetch": "^2.6.1",
-    "@tensorflow/tfjs-node": "^3.0.0",
-    "fs-extra": "^10.1.0",
-    "tfjs-node-gpu": "^3.0.0"
+    "telegraf": "^4.0.0",               // Telegram bot framework
+    "node-fetch": "^2.6.1",              // Để lấy dữ liệu từ các API hoặc web
+    "tensorflow": "^3.0.0",              // Thư viện học máy
+    "@tensorflow/tfjs-node": "^3.0.0",   // Thư viện TensorFlow cho Node.js
+    "fs-extra": "^10.1.0",               // Thư viện hệ thống tập tin
+    "natural": "^5.2.1",                 // Thư viện xử lý ngôn ngữ tự nhiên nếu cần
+    "lodash": "^4.17.21"                 // Các công cụ hỗ trợ trong dự án
   },
   "engines": {
     "node": "14.x"
