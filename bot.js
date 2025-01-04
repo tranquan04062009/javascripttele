@@ -4,7 +4,7 @@ const { PythonShell } = require('python-shell');
 const fs = require('fs');
 
 // Tạo bot với token từ BotFather
-const bot = new Telegraf('YOUR_BOT_TOKEN');
+const bot = new Telegraf('7755708665:AAFkF8i1eyoEHH83pL7lP2Vu1gnLluqaCYg');
 
 // Hàm bắt đầu và giúp đỡ
 bot.start((ctx) => {
