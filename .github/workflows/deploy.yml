@@ -1,0 +1,42 @@
+name: Telegram Bot Workflow
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '*/5 * * * *'  # Chạy tự động mỗi 5 phút (cron job để giữ bot hoạt động liên tục)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Cài đặt môi trường Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Hoặc phiên bản Node.js phù hợp với bot của bạn
+
+    # Cài đặt các phụ thuộc của dự án
+    - name: Install dependencies
+      run: |
+        npm install
+
+    # Đảm bảo tệp bot được tải về đúng
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    # Chạy bot Telegram (giả sử bot.js là điểm khởi đầu)
+    - name: Run Telegram Bot
+      run: |
+        nohup node bot.js &
+        sleep 10s  # Thời gian ngủ để đảm bảo bot đã khởi động xong
+        tail -f nohup.out  # Giữ bot chạy và theo dõi log đầu ra
+
+    # Lưu trữ log để kiểm tra trong quá trình chạy (tùy chọn)
+    - name: Upload Logs
+      uses: actions/upload-artifact@v2
+      with:
+        name: bot-logs
+        path: nohup.out
