@@ -2,7 +2,7 @@
   "name": "telegram-bot",
   "version": "1.0.0",
   "description": "Telegram bot dự đoán kết quả Tài/Xỉu",
-  "main": "bot.js",
+  "master": "bot.js",
   "scripts": {
     "start": "node bot.js",
     "test": "echo \"No tests specified\" && exit 0"
