@@ -1,0 +1,16 @@
+{
+  "name": "my-telegram-bot",
+  "version": "1.0.0",
+  "description": "Bot Telegram dự đoán kết quả Tài/Xỉu",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "node-telegram-bot-api": "^0.55.0",
+    "@tensorflow/tfjs-node": "^3.7.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
