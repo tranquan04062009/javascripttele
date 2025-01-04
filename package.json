@@ -4,18 +4,18 @@
   "description": "Telegram bot dự đoán kết quả Tài/Xỉu",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js",    # Lệnh chạy bot khi cần
-    "test": "echo \"No tests specified\" && exit 0"  # Placeholder cho test nếu cần
+    "start": "node bot.js",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
-    "telegraf": "^4.0.0",          # Thư viện cho bot Telegram
-    "node-fetch": "^2.6.1",         # Thư viện để fetch dữ liệu từ web (nếu cần)
-    "@tensorflow/tfjs-node": "^3.0.0",   # TensorFlow.js cho việc dự đoán học máy
-    "fs-extra": "^10.1.0",         # Thư viện giúp làm việc với file (nếu cần)
-    "tfjs-node-gpu": "^3.0.0"      # Nếu bạn muốn sử dụng GPU cho việc học máy
+    "telegraf": "^4.0.0",
+    "node-fetch": "^2.6.1",
+    "@tensorflow/tfjs-node": "^3.0.0",
+    "fs-extra": "^10.1.0",
+    "tfjs-node-gpu": "^3.0.0"
   },
   "engines": {
-    "node": "14.x"  # Đảm bảo sử dụng phiên bản Node.js 14.x
+    "node": "14.x"
   },
   "license": "MIT"
 }
