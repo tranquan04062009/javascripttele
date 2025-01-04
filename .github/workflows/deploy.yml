@@ -3,7 +3,7 @@ name: Telegram Bot Workflow
 on:
   push:
     branches:
-      - main
+      - master
   schedule:
     - cron: '*/5 * * * *'  # Chạy tự động mỗi 5 phút (cron job để giữ bot hoạt động liên tục)
 
