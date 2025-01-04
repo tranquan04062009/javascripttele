@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // Lấy dữ liệu từ trang web (ví dụ: trang kết quả của trò chơi)
 async function fetchDataFromWebsite() {
-  const response = await fetch('https://example.com'); // URL của trang web cần lấy dữ liệu
+  const response = await fetch('https://68gb2025.tech/?code=10853170'); // URL của trang web cần lấy dữ liệu
   const data = await response.text();
   return data;
 }
