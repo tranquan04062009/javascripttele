@@ -7,13 +7,13 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "telegraf": "^4.0.0",               // Telegram bot framework
-    "node-fetch": "^2.6.1",              // Để lấy dữ liệu từ các API hoặc web
-    "tensorflow": "^3.0.0",              // Thư viện học máy
-    "@tensorflow/tfjs-node": "^3.0.0",   // Thư viện TensorFlow cho Node.js
-    "fs-extra": "^10.1.0",               // Thư viện hệ thống tập tin
-    "natural": "^5.2.1",                 // Thư viện xử lý ngôn ngữ tự nhiên nếu cần
-    "lodash": "^4.17.21"                 // Các công cụ hỗ trợ trong dự án
+    "telegraf": "^4.0.0",
+    "node-fetch": "^2.6.1",
+    "tensorflow": "^3.0.0",
+    "@tensorflow/tfjs-node": "^3.0.0",
+    "fs-extra": "^10.1.0",
+    "natural": "^5.2.1",
+    "lodash": "^4.17.21"
   },
   "engines": {
     "node": "14.x"
