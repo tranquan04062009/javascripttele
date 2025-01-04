@@ -1,0 +1,36 @@
+import import tensorflow as tf
+from tensorflow import keras
+from sklearn.preprocessing import LabelEncoder
+import numpy as np
+import pandas as pd
+
+# Tạo dữ liệu giả lập cho huấn luyện
+data = pd.DataFrame({
+    'rounds': ["Tài", "Xỉu", "Tài", "Tài", "Xỉu"],
+    'features': np.random.rand(5, 10)
+})
+
+# Tiền xử lý dữ liệu
+X = np.array(data['features'].tolist())
+y = data['rounds'].values
+
+# Mã hóa nhãn
+label_encoder = LabelEncoder()
+y_encoded = label_encoder.fit_transform(y)
+
+# Xây dựng mô hình LSTM
+model = keras.Sequential([
+    keras.layers.LSTM(64, input_shape=(X.shape[1], 1), return_sequences=True),
+    keras.layers.LSTM(32),
+    keras.layers.Dense(1, activation='softmax')
+])
+
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+# Huấn luyện mô hình
+model.fit(X, y_encoded, epochs=10)
+
+# Lưu mô hình và encoder
+model.save('deepLearningModel.h5')
+with open('labelEncoder.pkl', 'wb') as f:
+    pickle.dump(label_encoder, f)
