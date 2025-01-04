@@ -1,0 +1,10 @@
+import pickle
+from sklearn.preprocessing import LabelEncoder
+
+# Mã hóa nhãn Tài/Xỉu
+label_encoder = LabelEncoder()
+label_encoder.fit(["Tài", "Xỉu"])
+
+# Lưu label encoder vào file
+with open('labelEncoder.pkl', 'wb') as f:
+    pickle.dump(label_encoder, f)
