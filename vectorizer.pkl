@@ -1,0 +1,15 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+import pickle
+
+# Tạo vectorizer
+vectorizer = TfidfVectorizer()
+
+# Giả sử bạn có một bộ dữ liệu văn bản
+corpus = ["Tài", "Xỉu", "Tài", "Xỉu"]
+
+# Huấn luyện vectorizer
+X = vectorizer.fit_transform(corpus)
+
+# Lưu vectorizer vào file
+with open('vectorizer.pkl', 'wb') as f:
+    pickle.dump(vectorizer, f)
