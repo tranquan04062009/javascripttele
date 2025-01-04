@@ -35,8 +35,8 @@ jobs:
         tail -f nohup.out  # Giữ bot chạy và theo dõi log đầu ra
 
     # Lưu trữ log để kiểm tra trong quá trình chạy (tùy chọn)
-    - name: Upload Logs
-      uses: actions/upload-artifact@v2
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
       with:
         name: bot-logs
         path: nohup.out
