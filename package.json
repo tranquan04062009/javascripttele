@@ -1,23 +1,38 @@
 {
-  "name": "telegram-bot",
+
+  "name": "telegram-spam-bot",
+
   "version": "1.0.0",
-  "description": "A Telegram bot with machine learning capabilities",
-  "main": "bot.js",
+
+  "description": "A Telegram bot to spam messages based on user input.",
+
+  "main": "index.js",
+
   "scripts": {
-    "start": "node bot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+    "start": "node index.js"
+
   },
+
   "dependencies": {
-    "telegraf": "^4.0.0",
-    "@tensorflow/tfjs": "^3.0.0",
-    "axios": "^0.21.1",
-    "dotenv": "^10.0.0",
-    "node-fetch": "^2.6.1"
+
+    "crypto": "^1.0.1",
+
+    "node-fetch": "^2.6.1",
+
+    "node-telegram-bot-api": "^0.54.0"
+
   },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  },
+
   "engines": {
-    "node": ">=16.0.0"
-  }
+
+    "node": ">=14.0.0"
+
+  },
+
+  "author": "Your Name",
+
+  "license": "MIT"
+
 }
+
