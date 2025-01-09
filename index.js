@@ -7,13 +7,14 @@ const token = process.env.BOT_TOKEN;
 if (!token) {
   console.error("Error: BOT_TOKEN environment variable is not set!");
   process.exit(1); // Thoát nếu token không được cung cấp
+}
 
 const bot = new TelegramBot(token, { polling: true });
 
 let userSpamSessions = {}; // Lưu danh sách spam theo người dùng
 let blockedUsers = []; // Lưu danh sách người dùng bị chặn
 
-// Hàm gửi tin nhắn spa
+// Hàm gửi tin nhắn spam
 const sendMessage = async (username, message, chatId, sessionId) => {
     let counter = 0;
     while (userSpamSessions[chatId]?.[sessionId - 1]?.isActive) {
