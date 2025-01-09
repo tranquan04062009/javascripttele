@@ -2,7 +2,12 @@ const crypto = require("crypto");
 const fetch = require("node-fetch");
 const TelegramBot = require("node-telegram-bot-api");
 
-const token = '7766543633:AAFWJcum26SIzzbn5t2arQblAQC8fl60dvk'; // Thay bằng token bot của bạn
+const token = process.env.BOT_TOKEN;
+
+if (!token) {
+  console.error("Error: BOT_TOKEN environment variable is not set!");
+  process.exit(1); // Thoát nếu token không được cung cấp
+
 const bot = new TelegramBot(token, { polling: true });
 
 let userSpamSessions = {}; // Lưu danh sách spam theo người dùng
