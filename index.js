@@ -8,7 +8,7 @@ const bot = new TelegramBot(token, { polling: true });
 let userSpamSessions = {}; // Lưu danh sách spam theo người dùng
 let blockedUsers = []; // Lưu danh sách người dùng bị chặn
 
-// Hàm gửi tin nhắn spam
+// Hàm gửi tin nhắn spa
 const sendMessage = async (username, message, chatId, sessionId) => {
     let counter = 0;
     while (userSpamSessions[chatId]?.[sessionId - 1]?.isActive) {
